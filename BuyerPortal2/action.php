@@ -11,7 +11,7 @@ require_once 'vendor\autoload.php';
     $charge = \Stripe\Charge::create([
         'source' => $_POST['stripeToken'],
         'description' => $product_title,
-        'amount' => $total ,
+        'amount' => $total ,     
         'currency' => 'usd',
       ]);
       if ($charge->status == 'succeeded') {
